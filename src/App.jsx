@@ -3,19 +3,18 @@ import { useState } from 'react'
 function App() {
   const [count, setCount] = useState(0)
 
-    return (
-      <div className="container">
-        <h1>Contador Básico</h1>
+  return (
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h1>Contador Básico</h1>
+      <h2>{count}</h2>
 
-        <div className="number" role="status" aria-live="polite">{count}</div>
-
-        <div className="buttons">
-          <button className="btn" onClick={() => setCount(count + 1)}>Incrementar</button>
-          <button className="btn secondary" onClick={() => setCount(count - 1)}>Disminuir</button>
-          <button className="btn danger" onClick={() => setCount(0)}>Reiniciar</button>
-        </div>
-      </div>
-    )
+      <button onClick={() => setCount(count + 1)}>Incrementar</button>
+      <br /><br />
+      <button onClick={() => setCount(count - 1)}>Disminuir</button>
+      <br /><br />
+      <button onClick={() => setCount(0)}>Reiniciar</button>
+    </div>
+  )
 }
 
 export default App
