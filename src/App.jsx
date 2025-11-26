@@ -1,21 +1,16 @@
-import { useState } from 'react'
+import React from "react";
+import Botom from "./Botom.jsx";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  let saludo = "Hola Mundo";
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>Contador Básico</h1>
-      <h2>{count}</h2>
-
-      <button onClick={() => setCount(count + 1)}>Incrementar</button>
-      <br /><br />
-      <button onClick={() => setCount(count - 1)}>Disminuir</button>
-      <br /><br />
-      <button onClick={() => setCount(0)}>Reiniciar</button>
+    <div className="color-fondo">
+      <h1>Holas</h1>
+      <h2>{saludo}</h2>
+      <Botom />
     </div>
-  )
+  );
 }
-
-export default App
+export default App;
 
